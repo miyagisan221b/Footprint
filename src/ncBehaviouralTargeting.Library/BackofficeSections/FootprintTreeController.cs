@@ -40,7 +40,7 @@ namespace ncBehaviouralTargeting.Library.BackofficeSections
                     }
                 };
 
-                if (umbraco.helper.GetCurrentUmbracoUser().UserType.Alias.Equals("admin", StringComparison.InvariantCultureIgnoreCase))
+                if (1==1)
                 {
                     treeNodes.Add(new SectionTreeNode
                     {

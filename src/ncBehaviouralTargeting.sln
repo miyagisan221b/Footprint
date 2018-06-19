@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ncBehaviouralTargeting.Website", "ncBehaviouralTargeting.Website\ncBehaviouralTargeting.Website.csproj", "{CD9F9888-EF8C-49C8-A5D7-70D3F3D290C3}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ncBehaviouralTargeting.Library.UnitTests", "ncBehaviouralTargeting.Library.UnitTests\ncBehaviouralTargeting.Library.UnitTests.csproj", "{993DE446-049C-415F-849F-B700EAF3A720}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ncBehaviouralTargeting.Library.IntegrationTests", "ncBehaviouralTargeting.Library.IntegrationTests\ncBehaviouralTargeting.Library.IntegrationTests.csproj", "{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "idwBehaviouralTargeting.Website", "idwBehaviouralTargeting.Website\idwBehaviouralTargeting.Website.csproj", "{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66F2D0E0-099B-48AE-AF22-69DD0AE9A362}
 	EndGlobalSection
 EndGlobal
