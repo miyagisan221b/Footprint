@@ -1,4 +1,78 @@
 SET IDENTITY_INSERT [dbo].[cmsPropertyData] ON
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (464, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 39, NULL, NULL, NULL, NULL, N'{
+  "name": "1 column layout",
+  "sections": [
+    {
+      "grid": 12,
+      "rows": [
+        {
+          "name": "Full Width",
+          "areas": [
+            {
+              "grid": 12,
+              "allowAll": false,
+              "allowed": [
+                "media",
+                "macro",
+                "embed",
+                "headline"
+              ],
+              "hasConfig": false,
+              "controls": [
+                {
+                  "value": {
+                    "macroAlias": "latestBlogposts",
+                    "macroParamsDictionary": {
+                      "numberOfPosts": "3",
+                      "startNodeId": "umb://document/1cb33e0a400a49389547b05a35739b8b"
+                    }
+                  },
+                  "editor": {
+                    "alias": "macro"
+                  },
+                  "active": false
+                }
+              ]
+            }
+          ],
+          "hasConfig": false,
+          "id": "cbb67dcf-dc82-700a-617f-84e754458e6a"
+        }
+      ]
+    }
+  ]
+}')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (465, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 40, 34, NULL, NULL, NULL, NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (466, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 42, NULL, NULL, NULL, N'Umbraco Sample Site', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (467, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 43, 37, NULL, NULL, NULL, NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (468, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 41, NULL, NULL, NULL, NULL, N'umb://media/3d758b1f24ec47b0a75c225b0444991b')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (469, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 44, NULL, NULL, NULL, NULL, NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (470, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 45, NULL, NULL, NULL, NULL, N'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (471, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 48, NULL, NULL, NULL, N'Umbraco Demo', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (472, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 47, NULL, NULL, NULL, N'Read All on the Blog', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (473, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 49, NULL, NULL, NULL, N'umb://document/1cb33e0a400a49389547b05a35739b8b', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (474, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 46, NULL, NULL, NULL, N'Umbraco HQ - Unicorn Square - Haubergsvej 1 - 5000 Odense C - Denmark - +45 70 26 11 62', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (475, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 53, NULL, NULL, NULL, N'umb://document/485343b1d99c4789a676e9b4c98a38d4', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (476, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 52, NULL, NULL, NULL, N'Umbraco Demo', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (477, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 50, NULL, NULL, NULL, NULL, N'Moonfish, steelhead, lamprey southern flounder tadpole fish sculpin bigeye, blue-redstripe danio collared dogfish. Smalleye squaretail goldfish arowana butterflyfish pipefish wolf-herring jewel tetra, shiner; gibberfish red velvetfish. Thornyhead yellowfin pike threadsail ayu cutlassfish.')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (478, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 51, NULL, NULL, NULL, N'Check our products', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (479, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', 90, NULL, NULL, NULL, NULL, N'{
+  "isNcbt": true,
+  "segments": [
+    {
+      "alias": "Test",
+      "sortOrder": 0,
+      "value": "<p>Test...</p>"
+    },
+    {
+      "alias": "default",
+      "sortOrder": 9999,
+      "value": "<p>Default...</p>"
+    }
+  ]
+}')
+SET IDENTITY_INSERT [dbo].[cmsPropertyData] OFF
+SET IDENTITY_INSERT [dbo].[cmsPropertyData] ON
 INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDecimal], [dataDate], [dataNvarchar], [dataNtext]) VALUES (1, 1094, '7c40b520-507a-4f7e-9099-51e4bc3ca73a', 39, NULL, NULL, NULL, NULL, N'{
   "name": "1 column layout",
   "sections": [

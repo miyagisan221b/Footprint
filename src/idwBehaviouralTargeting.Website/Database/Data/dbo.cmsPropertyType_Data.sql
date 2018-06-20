@@ -1,4 +1,7 @@
 SET IDENTITY_INSERT [dbo].[cmsPropertyType] ON
+INSERT INTO [dbo].[cmsPropertyType] ([id], [dataTypeId], [contentTypeId], [propertyTypeGroupId], [Alias], [Name], [sortOrder], [mandatory], [validationRegExp], [Description], [UniqueID]) VALUES (90, 1135, 1084, 17, N'text', N'Text', 4, 0, NULL, NULL, '5ef405db-2847-4bff-97d3-e0001825a4f1')
+SET IDENTITY_INSERT [dbo].[cmsPropertyType] OFF
+SET IDENTITY_INSERT [dbo].[cmsPropertyType] ON
 INSERT INTO [dbo].[cmsPropertyType] ([id], [dataTypeId], [contentTypeId], [propertyTypeGroupId], [Alias], [Name], [sortOrder], [mandatory], [validationRegExp], [Description], [UniqueID]) VALUES (6, 1043, 1032, 3, N'umbracoFile', N'Upload image', 0, 0, NULL, NULL, '00000006-0000-0000-0000-000000000000')
 INSERT INTO [dbo].[cmsPropertyType] ([id], [dataTypeId], [contentTypeId], [propertyTypeGroupId], [Alias], [Name], [sortOrder], [mandatory], [validationRegExp], [Description], [UniqueID]) VALUES (7, -92, 1032, 3, N'umbracoWidth', N'Width', 0, 0, NULL, NULL, '00000007-0000-0000-0000-000000000000')
 INSERT INTO [dbo].[cmsPropertyType] ([id], [dataTypeId], [contentTypeId], [propertyTypeGroupId], [Alias], [Name], [sortOrder], [mandatory], [validationRegExp], [Description], [UniqueID]) VALUES (8, -92, 1032, 3, N'umbracoHeight', N'Height', 0, 0, NULL, NULL, '00000008-0000-0000-0000-000000000000')

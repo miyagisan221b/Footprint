@@ -1,3 +1,60 @@
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', '2018-06-20 15:29:06.677', N'<home id="1094" key="156f1933-e327-4dce-b665-110d62720d03" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2018-06-20T12:58:15" updateDate="2018-06-20T15:29:06" nodeName="Home" urlName="home" path="-1,1094" isDoc="" nodeType="1084" creatorName="Danny Summers" writerName="Danny Summers" writerID="0" template="1055" nodeTypeAlias="home" isPublished="true"><bodyText><![CDATA[{
+  "name": "1 column layout",
+  "sections": [
+    {
+      "grid": 12,
+      "rows": [
+        {
+          "name": "Full Width",
+          "areas": [
+            {
+              "grid": 12,
+              "allowAll": false,
+              "allowed": [
+                "media",
+                "macro",
+                "embed",
+                "headline"
+              ],
+              "hasConfig": false,
+              "controls": [
+                {
+                  "value": {
+                    "macroAlias": "latestBlogposts",
+                    "macroParamsDictionary": {
+                      "numberOfPosts": "3",
+                      "startNodeId": "umb://document/1cb33e0a400a49389547b05a35739b8b"
+                    }
+                  },
+                  "editor": {
+                    "alias": "macro"
+                  },
+                  "active": false
+                }
+              ]
+            }
+          ],
+          "hasConfig": false,
+          "id": "cbb67dcf-dc82-700a-617f-84e754458e6a"
+        }
+      ]
+    }
+  ]
+}]]></bodyText><colorTheme>34</colorTheme><sitename><![CDATA[Umbraco Sample Site]]></sitename><font>37</font><HeroBackgroundImage><![CDATA[umb://media/3d758b1f24ec47b0a75c225b0444991b]]></HeroBackgroundImage><footerDescription><![CDATA[Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat]]></footerDescription><footerHeader><![CDATA[Umbraco Demo]]></footerHeader><footerCTACaption><![CDATA[Read All on the Blog]]></footerCTACaption><FooterCtalink><![CDATA[umb://document/1cb33e0a400a49389547b05a35739b8b]]></FooterCtalink><footerAddress><![CDATA[Umbraco HQ - Unicorn Square - Haubergsvej 1 - 5000 Odense C - Denmark - +45 70 26 11 62]]></footerAddress><HeroCtalink><![CDATA[umb://document/485343b1d99c4789a676e9b4c98a38d4]]></HeroCtalink><heroHeader><![CDATA[Umbraco Demo]]></heroHeader><heroDescription><![CDATA[Moonfish, steelhead, lamprey southern flounder tadpole fish sculpin bigeye, blue-redstripe danio collared dogfish. Smalleye squaretail goldfish arowana butterflyfish pipefish wolf-herring jewel tetra, shiner; gibberfish red velvetfish. Thornyhead yellowfin pike threadsail ayu cutlassfish.]]></heroDescription><heroCTACaption><![CDATA[Check our products]]></heroCTACaption><text><![CDATA[{
+  "isNcbt": true,
+  "segments": [
+    {
+      "alias": "Test",
+      "sortOrder": 0,
+      "value": "<p>Test...</p>"
+    },
+    {
+      "alias": "default",
+      "sortOrder": 9999,
+      "value": "<p>Default...</p>"
+    }
+  ]
+}]]></text></home>')
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1094, '7c40b520-507a-4f7e-9099-51e4bc3ca73a', '2018-06-20 12:58:16.677', N'<home id="1094" key="156f1933-e327-4dce-b665-110d62720d03" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2018-06-20T12:58:15" updateDate="2018-06-20T12:58:16" nodeName="Home" urlName="home" path="-1,1094" isDoc="" nodeType="1084" creatorName="Danny Summers" writerName="Danny Summers" writerID="0" template="1055" nodeTypeAlias="home" isPublished="false"><bodyText><![CDATA[{
   "name": "1 column layout",
   "sections": [

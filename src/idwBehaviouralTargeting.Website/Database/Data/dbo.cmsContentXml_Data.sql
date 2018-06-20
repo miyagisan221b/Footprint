@@ -1,46 +1,3 @@
-INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1094, N'<home id="1094" key="156f1933-e327-4dce-b665-110d62720d03" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2018-06-20T12:58:15" updateDate="2018-06-20T12:58:17" nodeName="Home" urlName="home" path="-1,1094" isDoc="" nodeType="1084" creatorName="Danny Summers" writerName="Danny Summers" writerID="0" template="1055" nodeTypeAlias="home" isPublished="true"><bodyText><![CDATA[{
-  "name": "1 column layout",
-  "sections": [
-    {
-      "grid": 12,
-      "rows": [
-        {
-          "name": "Full Width",
-          "areas": [
-            {
-              "grid": 12,
-              "allowAll": false,
-              "allowed": [
-                "media",
-                "macro",
-                "embed",
-                "headline"
-              ],
-              "hasConfig": false,
-              "controls": [
-                {
-                  "value": {
-                    "macroAlias": "latestBlogposts",
-                    "macroParamsDictionary": {
-                      "numberOfPosts": "3",
-                      "startNodeId": "umb://document/1cb33e0a400a49389547b05a35739b8b"
-                    }
-                  },
-                  "editor": {
-                    "alias": "macro"
-                  },
-                  "active": false
-                }
-              ]
-            }
-          ],
-          "hasConfig": false,
-          "id": "cbb67dcf-dc82-700a-617f-84e754458e6a"
-        }
-      ]
-    }
-  ]
-}]]></bodyText><colorTheme>34</colorTheme><sitename><![CDATA[Umbraco Sample Site]]></sitename><font>37</font><HeroBackgroundImage><![CDATA[umb://media/3d758b1f24ec47b0a75c225b0444991b]]></HeroBackgroundImage><footerDescription><![CDATA[Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat]]></footerDescription><footerHeader><![CDATA[Umbraco Demo]]></footerHeader><footerCTACaption><![CDATA[Read All on the Blog]]></footerCTACaption><FooterCtalink><![CDATA[umb://document/1cb33e0a400a49389547b05a35739b8b]]></FooterCtalink><footerAddress><![CDATA[Umbraco HQ - Unicorn Square - Haubergsvej 1 - 5000 Odense C - Denmark - +45 70 26 11 62]]></footerAddress><HeroCtalink><![CDATA[umb://document/485343b1d99c4789a676e9b4c98a38d4]]></HeroCtalink><heroHeader><![CDATA[Umbraco Demo]]></heroHeader><heroDescription><![CDATA[Moonfish, steelhead, lamprey southern flounder tadpole fish sculpin bigeye, blue-redstripe danio collared dogfish. Smalleye squaretail goldfish arowana butterflyfish pipefish wolf-herring jewel tetra, shiner; gibberfish red velvetfish. Thornyhead yellowfin pike threadsail ayu cutlassfish.]]></heroDescription><heroCTACaption><![CDATA[Check our products]]></heroCTACaption></home>')
 INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1095, N'<products id="1095" key="485343b1-d99c-4789-a676-e9b4c98a38d4" parentID="1094" level="2" creatorID="0" sortOrder="0" createDate="2018-06-20T12:58:15" updateDate="2018-06-20T12:58:17" nodeName="Products" urlName="products" path="-1,1094,1095" isDoc="" nodeType="1093" creatorName="Danny Summers" writerName="Danny Summers" writerID="0" template="1060" nodeTypeAlias="products" isPublished="true"><pageTitle><![CDATA[Our Gorgeous Selection]]></pageTitle><bodyText><![CDATA[{
   "name": "1 column layout",
   "sections": [
@@ -324,3 +281,60 @@ INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1131, N'<Image id="1
 INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1132, N'<Image id="1132" key="def8b962-2107-486d-b2d6-5be3639a6c31" parentID="1119" level="2" creatorID="0" sortOrder="2" createDate="2018-06-20T12:58:17" updateDate="2018-06-20T12:58:17" nodeName="Lee Kelleher" urlName="lee-kelleher" path="-1,1119,1132" isDoc="" nodeType="1032" writerName="Danny Summers" writerID="0" version="125bb4e4-140c-4e16-aeca-5b765c5e86be" template="0" nodeTypeAlias="Image"><umbracoFile><![CDATA[{src: ''/media/1004/18531854019_351c579559_h.jpg'', crops: []}]]></umbracoFile></Image>')
 INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1133, N'<Image id="1133" key="981014a4-f0b9-46db-aa91-87cf2027f6e0" parentID="1119" level="2" creatorID="0" sortOrder="3" createDate="2018-06-20T12:58:17" updateDate="2018-06-20T12:58:17" nodeName="Jeavon Leopold" urlName="jeavon-leopold" path="-1,1119,1133" isDoc="" nodeType="1032" writerName="Danny Summers" writerID="0" version="9c29c3dd-a18e-4faf-90a1-1c1f127a6cc3" template="0" nodeTypeAlias="Image"><umbracoFile><![CDATA[{src: ''/media/1002/18095416144_44a566a5f4_h.jpg'', crops: []}]]></umbracoFile></Image>')
 INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1134, N'<Image id="1134" key="fcc18600-8f9b-4995-8954-3cb0d335faf1" parentID="1119" level="2" creatorID="0" sortOrder="4" createDate="2018-06-20T12:58:17" updateDate="2018-06-20T12:58:17" nodeName="Jeroen Breuer" urlName="jeroen-breuer" path="-1,1119,1134" isDoc="" nodeType="1032" writerName="Danny Summers" writerID="0" version="15e715cf-8305-4c8d-a881-aeddac0d65d6" template="0" nodeTypeAlias="Image"><umbracoFile><![CDATA[{src: ''/media/1005/18530280048_459b8b61b2_h.jpg'', crops: []}]]></umbracoFile></Image>')
+INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1094, N'<home id="1094" key="156f1933-e327-4dce-b665-110d62720d03" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2018-06-20T12:58:15" updateDate="2018-06-20T15:29:06" nodeName="Home" urlName="home" path="-1,1094" isDoc="" nodeType="1084" creatorName="Danny Summers" writerName="Danny Summers" writerID="0" template="1055" nodeTypeAlias="home" isPublished="true"><bodyText><![CDATA[{
+  "name": "1 column layout",
+  "sections": [
+    {
+      "grid": 12,
+      "rows": [
+        {
+          "name": "Full Width",
+          "areas": [
+            {
+              "grid": 12,
+              "allowAll": false,
+              "allowed": [
+                "media",
+                "macro",
+                "embed",
+                "headline"
+              ],
+              "hasConfig": false,
+              "controls": [
+                {
+                  "value": {
+                    "macroAlias": "latestBlogposts",
+                    "macroParamsDictionary": {
+                      "numberOfPosts": "3",
+                      "startNodeId": "umb://document/1cb33e0a400a49389547b05a35739b8b"
+                    }
+                  },
+                  "editor": {
+                    "alias": "macro"
+                  },
+                  "active": false
+                }
+              ]
+            }
+          ],
+          "hasConfig": false,
+          "id": "cbb67dcf-dc82-700a-617f-84e754458e6a"
+        }
+      ]
+    }
+  ]
+}]]></bodyText><colorTheme>34</colorTheme><sitename><![CDATA[Umbraco Sample Site]]></sitename><font>37</font><HeroBackgroundImage><![CDATA[umb://media/3d758b1f24ec47b0a75c225b0444991b]]></HeroBackgroundImage><footerDescription><![CDATA[Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat]]></footerDescription><footerHeader><![CDATA[Umbraco Demo]]></footerHeader><footerCTACaption><![CDATA[Read All on the Blog]]></footerCTACaption><FooterCtalink><![CDATA[umb://document/1cb33e0a400a49389547b05a35739b8b]]></FooterCtalink><footerAddress><![CDATA[Umbraco HQ - Unicorn Square - Haubergsvej 1 - 5000 Odense C - Denmark - +45 70 26 11 62]]></footerAddress><HeroCtalink><![CDATA[umb://document/485343b1d99c4789a676e9b4c98a38d4]]></HeroCtalink><heroHeader><![CDATA[Umbraco Demo]]></heroHeader><heroDescription><![CDATA[Moonfish, steelhead, lamprey southern flounder tadpole fish sculpin bigeye, blue-redstripe danio collared dogfish. Smalleye squaretail goldfish arowana butterflyfish pipefish wolf-herring jewel tetra, shiner; gibberfish red velvetfish. Thornyhead yellowfin pike threadsail ayu cutlassfish.]]></heroDescription><heroCTACaption><![CDATA[Check our products]]></heroCTACaption><text><![CDATA[{
+  "isNcbt": true,
+  "segments": [
+    {
+      "alias": "Test",
+      "sortOrder": 0,
+      "value": "<p>Test...</p>"
+    },
+    {
+      "alias": "default",
+      "sortOrder": 9999,
+      "value": "<p>Default...</p>"
+    }
+  ]
+}]]></text></home>')

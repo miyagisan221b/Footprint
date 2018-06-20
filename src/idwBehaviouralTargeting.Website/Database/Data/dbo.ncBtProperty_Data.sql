@@ -1,0 +1,11 @@
+SET IDENTITY_INSERT [dbo].[ncBtProperty] ON
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (1, N'ncbt.browser', N'Browser', 5, N'Browser used by the visitor', N'Chrome, Firefox and Safari', 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (2, N'ncbt.userAgent', N'User agent', 5, N'User agent of the visitor''s browser', N'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36', 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (3, N'ncbt.isMobile', N'Is mobile device', 4, N'Does the visitor visit your website from a mobile device?', N'true and false', 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (4, N'ncbt.mobileDeviceManufacturer', N'Mobile device manufacturer', 5, N'Manufacturer of the visitors device (only applies for mobile devices)', N'Samsung, Apple and Nokia', 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (5, N'ncbt.mobileDeviceModel', N'Mobile device model', 5, N'Model of the visitors device (only applies for mobile devices)', N'IPhone', 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (6, N'ncbt.userIp', N'IP address', 5, N'IP address of the visitor', N'69.89.31.226', 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (7, N'ncbt.queryString', N'Query string', 5, N'Query string for current pageview', NULL, 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (8, N'ncbt.pageId', N'Visited page', 1, N'Page visited by the visitor', NULL, 0)
+INSERT INTO [dbo].[ncBtProperty] ([Id], [Alias], [DisplayName], [DataType], [Description], [Examples], [IsArray]) VALUES (9, N'ncbt.httpReferrer', N'Referring url', 5, N'URL of site/service that linked to you', N'Match banana if you want to target hits from novicell.dk/banana', 0)
+SET IDENTITY_INSERT [dbo].[ncBtProperty] OFF

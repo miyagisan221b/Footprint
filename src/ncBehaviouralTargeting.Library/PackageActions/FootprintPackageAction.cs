@@ -179,6 +179,19 @@ CREATE TABLE [dbo].[ncBtCriterion](
 ) ON [PRIMARY]
 GO
 
+CREATE TABLE [dbo].[ncBtVisitorSegment](
+	[VisitorId] [nvarchar](255) NOT NULL,
+	[SegmentAlias] [nvarchar](255) NOT NULL,
+	[CreatedUtc] [datetime] NOT NULL,
+ CONSTRAINT [PK_ncBtVisitorSegment] PRIMARY KEY NONCLUSTERED 
+(
+	[VisitorId] ASC,
+	[SegmentAlias] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -655,6 +668,7 @@ DROP TABLE [ncBtProperty];
 DROP TABLE [ncBtCriterion];
 DROP TABLE [ncBtCriterionGroup];
 DROP TABLE [ncBtSegment];
+DROP TABLE [ncBtVisitorSegment];
 DROP TABLE [ncBtAction];
 GO
 

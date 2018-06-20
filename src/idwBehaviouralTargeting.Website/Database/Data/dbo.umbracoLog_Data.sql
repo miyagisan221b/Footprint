@@ -1,4 +1,13 @@
 SET IDENTITY_INSERT [dbo].[umbracoLog] ON
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (60, 0, 0, '2018-06-20 14:46:32.270', N'Save', N'Save DataTypeDefinition performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (61, 0, 1135, '2018-06-20 14:47:07.213', N'Save', N'Save DataTypeDefinition performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (62, 0, 0, '2018-06-20 14:47:35.653', N'Save', N'Save DataTypeDefinition performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (63, 0, 1136, '2018-06-20 14:47:46.953', N'Save', N'Save DataTypeDefinition performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (64, 0, 1084, '2018-06-20 14:56:55.973', N'Save', N'Save ContentType performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (65, 0, 1094, '2018-06-20 14:57:20.917', N'Publish', N'Save and Publish performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (66, 0, 1094, '2018-06-20 15:29:06.690', N'Publish', N'Save and Publish performed by user')
+SET IDENTITY_INSERT [dbo].[umbracoLog] OFF
+SET IDENTITY_INSERT [dbo].[umbracoLog] ON
 INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (1, 0, -1, '2018-06-20 12:58:13.787', N'Save', N'Save Template performed by user')
 INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (2, 0, -1, '2018-06-20 12:58:13.997', N'Save', N'Save DataTypeDefinition performed by user')
 INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (3, 0, -1, '2018-06-20 12:58:14.560', N'Save', N'Save DataTypeDefinition performed by user')

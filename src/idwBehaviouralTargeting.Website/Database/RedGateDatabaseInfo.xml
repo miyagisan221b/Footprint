@@ -55,7 +55,7 @@
     <DataWriteAllFilesInOneDirectory>True</DataWriteAllFilesInOneDirectory>
   </WriteToFileOptions>
   <DataFileSet>
-    <Count>51</Count>
+    <Count>60</Count>
     <DataFile>dbo.cmsDictionary_Data.sql</DataFile>
     <DataFile>dbo.cmsMacro_Data.sql</DataFile>
     <DataFile>dbo.cmsTags_Data.sql</DataFile>
@@ -107,5 +107,14 @@
     <DataFile>dbo.cmsPreviewXml_Data.sql</DataFile>
     <DataFile>dbo.cmsPropertyData_Data.sql</DataFile>
     <DataFile>dbo.cmsTagRelationship_Data.sql</DataFile>
+    <DataFile>dbo.ncBtAction_Data.sql</DataFile>
+    <DataFile>dbo.ncBtCriterion_Data.sql</DataFile>
+    <DataFile>dbo.ncBtCriterionGroup_Data.sql</DataFile>
+    <DataFile>dbo.ncBtOperator_Data.sql</DataFile>
+    <DataFile>dbo.ncBtProperty_Data.sql</DataFile>
+    <DataFile>dbo.ncBtSegment_Data.sql</DataFile>
+    <DataFile>dbo.ncBtVisitorMongo_Data.sql</DataFile>
+    <DataFile>dbo.ncBtVisitors_Data.sql</DataFile>
+    <DataFile>dbo.ncBtVisitorSegment_Data.sql</DataFile>
   </DataFileSet>
 </DatabaseInformation>

@@ -1,4 +1,7 @@
 SET IDENTITY_INSERT [dbo].[cmsContentVersion] ON
+INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate]) VALUES (66, 1094, '5fa49757-b98c-46d9-8816-318bb8ae1cf1', '2018-06-20 15:29:06.633')
+SET IDENTITY_INSERT [dbo].[cmsContentVersion] OFF
+SET IDENTITY_INSERT [dbo].[cmsContentVersion] ON
 INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate]) VALUES (1, 1094, '7c40b520-507a-4f7e-9099-51e4bc3ca73a', '2018-06-20 12:58:16.633')
 INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate]) VALUES (2, 1095, '973fb228-f300-481e-b88a-9134f88d89f3', '2018-06-20 12:58:16.783')
 INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate]) VALUES (3, 1096, '49fe5d88-cad6-474f-b263-1df970992676', '2018-06-20 12:58:15.710')

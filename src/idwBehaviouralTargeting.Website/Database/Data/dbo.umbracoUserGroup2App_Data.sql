@@ -1,3 +1,4 @@
+INSERT INTO [dbo].[umbracoUserGroup2App] ([userGroupId], [app]) VALUES (1, N'ncbt')
 INSERT INTO [dbo].[umbracoUserGroup2App] ([userGroupId], [app]) VALUES (1, N'content')
 INSERT INTO [dbo].[umbracoUserGroup2App] ([userGroupId], [app]) VALUES (1, N'developer')
 INSERT INTO [dbo].[umbracoUserGroup2App] ([userGroupId], [app]) VALUES (1, N'forms')

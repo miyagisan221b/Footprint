@@ -1,4 +1,8 @@
 SET IDENTITY_INSERT [dbo].[cmsDataType] ON
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (51, 1135, N'Novicell.Footprint.FootprintContent', N'Ntext')
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (52, 1136, N'Novicell.Footprint.FootprintContent', N'Ntext')
+SET IDENTITY_INSERT [dbo].[cmsDataType] OFF
+SET IDENTITY_INSERT [dbo].[cmsDataType] ON
 INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (-28, -97, N'Umbraco.ListView', N'Nvarchar')
 INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (-27, -96, N'Umbraco.ListView', N'Nvarchar')
 INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (-26, -95, N'Umbraco.ListView', N'Nvarchar')

@@ -1,4 +1,63 @@
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] ON
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (87, 1135, N'{
+  "selectedEditor": "Umbraco.TinyMCEv3",
+  "preValues": [
+    {
+      "hideLabel": true,
+      "alias": "editor",
+      "description": null,
+      "label": null,
+      "view": "views/propertyeditors/rte/rte.prevalues.html",
+      "value": {
+        "toolbar": [
+          "code",
+          "styleselect",
+          "bold",
+          "italic",
+          "alignleft",
+          "aligncenter",
+          "alignright",
+          "bullist",
+          "numlist",
+          "outdent",
+          "indent",
+          "link",
+          "umbmediapicker",
+          "umbmacro",
+          "umbembeddialog"
+        ],
+        "stylesheets": [],
+        "dimensions": {
+          "height": 500
+        },
+        "maxImageSize": 500
+      }
+    },
+    {
+      "hideLabel": false,
+      "alias": "hideLabel",
+      "description": null,
+      "label": "Hide Label",
+      "view": "boolean",
+      "value": null
+    }
+  ]
+}', 1, N'contentType')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (88, 1136, N'{
+  "selectedEditor": "Umbraco.Textbox",
+  "preValues": [
+    {
+      "hideLabel": false,
+      "alias": "maxChars",
+      "description": "If empty - 500 character limit",
+      "label": "Maximum allowed characters",
+      "view": "textstringlimited",
+      "value": null
+    }
+  ]
+}', 1, N'contentType')
+SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] OFF
+SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] ON
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (-9, -96, N'[{"alias":"updateDate","header":"Last edited","isSystem":1},{"alias":"owner","header":"Updated by","isSystem":1}]', 5, N'includeProperties')
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (-8, -96, N'[{"name": "Grid","path": "views/propertyeditors/listview/layouts/grid/grid.html", "icon": "icon-thumbnails-small", "isSystem": 1, "selected": true},{"name": "List","path": "views/propertyeditors/listview/layouts/list/list.html","icon": "icon-list", "isSystem": 1,"selected": true}]', 4, N'layouts')
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (-7, -96, N'desc', 3, N'orderDirection')

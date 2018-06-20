@@ -66,6 +66,12 @@
     <Reference Include="controls, Version=1.0.6634.25794, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.9.2\lib\net45\controls.dll</HintPath>
     </Reference>
+    <Reference Include="CookComputing.XmlRpcV2, Version=2.5.0.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL">
+      <HintPath>..\packages\xmlrpcnet.2.5.0\lib\net20\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
     <Reference Include="Examine, Version=0.1.89.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Examine.0.1.89\lib\net45\Examine.dll</HintPath>
     </Reference>
@@ -143,6 +149,15 @@
     <Reference Include="MiniProfiler, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
       <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
     </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.6.1\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.6.1\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.6.1\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
@@ -157,6 +172,9 @@
     </Reference>
     <Reference Include="SQLCE4Umbraco, Version=1.0.6634.25794, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.9.2\lib\net45\SQLCE4Umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.1.36.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Immutable.1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
@@ -174,6 +192,10 @@
     </Reference>
     <Reference Include="System.Reflection.Metadata, Version=1.0.21.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Reflection.Metadata.1.0.21\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Dataflow.4.7.0\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
@@ -250,6 +272,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\ncFootprint\Api\footprint.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Base.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Base.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Dashboards\BaseDashboard.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Dashboards\OverviewDashboard.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\ActionCreate.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\ActionEdit.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\ActionOverview.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\BaseEdit.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\BaseOverview.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\PropertyCreate.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\PropertyEdit.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\PropertyOverview.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\QueryOverview.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\SegmentCreate.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\SegmentEdit.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\SegmentOverview.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Controllers\Views\SettingsOverview.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Dashboards\OverviewDashboard.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\ActionCreate.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\ActionEdit.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\ActionOverview.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\PropertyCreate.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\PropertyEdit.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\PropertyOverview.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\QueryOverview.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\SegmentCreate.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\SegmentEdit.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\SegmentOverview.html" />
+    <Content Include="App_Plugins\ncFootprint\Backoffice\ncbt\Views\SettingsOverview.html" />
+    <Content Include="App_Plugins\ncFootprint\Base.html" />
+    <Content Include="App_Plugins\ncFootprint\Dialogs\Controllers\PropertyPickerDialog.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Dialogs\Controllers\SegmentPickerDialog.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Dialogs\Controllers\SegmentSettingsDialog.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Dialogs\Views\PropertyPickerDialog.html" />
+    <Content Include="App_Plugins\ncFootprint\Dialogs\Views\SegmentPickerDialog.html" />
+    <Content Include="App_Plugins\ncFootprint\Dialogs\Views\SegmentSettingsDialog.html" />
+    <Content Include="App_Plugins\ncFootprint\Directives\Base.directives.js" />
+    <Content Include="App_Plugins\ncFootprint\dist\css\backoffice.min.css" />
+    <Content Include="App_Plugins\ncFootprint\dist\scripts\backoffice.min.js" />
+    <Content Include="App_Plugins\ncFootprint\Editors\Controllers\FootprintContent.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Editors\Controllers\FootprintContent.Prevalues.controller.js" />
+    <Content Include="App_Plugins\ncFootprint\Editors\Views\FootprintContent.html" />
+    <Content Include="App_Plugins\ncFootprint\Editors\Views\FootprintContent.Prevalues.html" />
+    <Content Include="App_Plugins\ncFootprint\Resources\Action.resource.js" />
+    <Content Include="App_Plugins\ncFootprint\Resources\Dashboard.resource.js" />
+    <Content Include="App_Plugins\ncFootprint\Resources\Property.resource.js" />
+    <Content Include="App_Plugins\ncFootprint\Resources\PropertyEditor.resource.js" />
+    <Content Include="App_Plugins\ncFootprint\Resources\Query.resource.js" />
+    <Content Include="App_Plugins\ncFootprint\Resources\Segment.resource.js" />
+    <Content Include="App_Plugins\ncFootprint\Resources\SegmentOperator.resource.js" />
+    <Content Include="App_Plugins\ncFootprint\Resources\SegmentUtility.resource.js" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
@@ -273,6 +347,12 @@
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
+    <Content Include="App_Plugins\ncFootprint\package.manifest" />
+    <Content Include="App_Plugins\ncFootprint\test_footprint.config" />
+    <Content Include="App_Plugins\ncFootprint\footprint.config" />
+    <Content Include="..\ncBehaviouralTargeting.Website\App_Data\packages\created\createdPackages.config">
+      <Link>App_Data\packages\created\createdPackages.config</Link>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -285,6 +365,22 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
+    <Content Include="Views\MacroPartials\FeaturedProducts.cshtml" />
+    <Content Include="Views\MacroPartials\LatestBlogposts.cshtml" />
+    <Content Include="Views\Partials\CategoryLinks.cshtml" />
+    <Content Include="Views\Partials\Navigation\SubNavigation.cshtml" />
+    <Content Include="Views\Partials\Navigation\TopNavigation.cshtml" />
+    <Content Include="Views\Partials\SectionHeader.cshtml" />
+    <Content Include="Views\Blog.cshtml" />
+    <Content Include="Views\Blogpost.cshtml" />
+    <Content Include="Views\Contact.cshtml" />
+    <Content Include="Views\ContentPage.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\People.cshtml" />
+    <Content Include="Views\Person.cshtml" />
+    <Content Include="Views\Product.cshtml" />
+    <Content Include="Views\Products.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -325,6 +421,17 @@
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ncBehaviouralTargeting.Library\ncBehaviouralTargeting.Library.csproj">
+      <Project>{45a4da7f-3b77-416a-a5d8-0edf8aa0f525}</Project>
+      <Name>ncBehaviouralTargeting.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Plugins\ncFootprint\Assets\" />
+    <Folder Include="App_Plugins\ncFootprint\Filters\" />
+    <Folder Include="App_Plugins\ncFootprint\Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
