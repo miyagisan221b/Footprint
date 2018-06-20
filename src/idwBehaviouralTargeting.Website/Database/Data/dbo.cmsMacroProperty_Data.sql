@@ -1,0 +1,6 @@
+SET IDENTITY_INSERT [dbo].[cmsMacroProperty] ON
+INSERT INTO [dbo].[cmsMacroProperty] ([id], [uniquePropertyId], [editorAlias], [macro], [macroPropertySortOrder], [macroPropertyAlias], [macroPropertyName]) VALUES (1, '2c95366e-e0ae-4478-a4d0-9879e1f80c25', N'contentType', 1, 0, N'products', N'Choose Products')
+INSERT INTO [dbo].[cmsMacroProperty] ([id], [uniquePropertyId], [editorAlias], [macro], [macroPropertySortOrder], [macroPropertyAlias], [macroPropertyName]) VALUES (2, '6779d825-11f7-4b08-b07d-a96d27f5a965', N'Umbraco.Integer', 2, 0, N'numberOfPosts', N'How many posts should be shown')
+INSERT INTO [dbo].[cmsMacroProperty] ([id], [uniquePropertyId], [editorAlias], [macro], [macroPropertySortOrder], [macroPropertyAlias], [macroPropertyName]) VALUES (3, 'cf874a60-e528-4fca-ace9-7f6242167a10', N'Umbraco.ContentPicker2', 2, 0, N'startNodeId', N'Where to get blog posts from')
+INSERT INTO [dbo].[cmsMacroProperty] ([id], [uniquePropertyId], [editorAlias], [macro], [macroPropertySortOrder], [macroPropertyAlias], [macroPropertyName]) VALUES (4, '213ac9f9-0cbf-414c-9478-770712066461', N'Umbraco.ContentPickerAlias', 3, 0, N'product', N'Choose Product')
+SET IDENTITY_INSERT [dbo].[cmsMacroProperty] OFF

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ncBehaviouralTargeting.Libr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ncBehaviouralTargeting.Library.IntegrationTests", "ncBehaviouralTargeting.Library.IntegrationTests\ncBehaviouralTargeting.Library.IntegrationTests.csproj", "{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "idwBehaviouralTargeting.Website", "idwBehaviouralTargeting.Website\idwBehaviouralTargeting.Website.csproj", "{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "idwBehaviouralTargeting.Website", "idwBehaviouralTargeting.Website\idwBehaviouralTargeting.Website.csproj", "{FDCB30BD-2A0D-4C4B-B358-C655DF692923}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DDC5499-E41E-4FD1-AEC1-A9A8FEB0E81B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B10D97D-4AED-4463-BE4E-7AEFE4CC0E86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDCB30BD-2A0D-4C4B-B358-C655DF692923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCB30BD-2A0D-4C4B-B358-C655DF692923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCB30BD-2A0D-4C4B-B358-C655DF692923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCB30BD-2A0D-4C4B-B358-C655DF692923}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

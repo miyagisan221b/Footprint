@@ -1,0 +1,1 @@
+INSERT INTO [dbo].[umbracoUserLogin] ([sessionId], [userId], [loggedInUtc], [lastValidatedUtc], [loggedOutUtc], [ipAddress]) VALUES ('373906f3-1b73-40e9-b6e6-fdffda31fcb5', 0, '2018-06-20 02:58:25.660', '2018-06-20 02:58:25.660', NULL, N'::1')

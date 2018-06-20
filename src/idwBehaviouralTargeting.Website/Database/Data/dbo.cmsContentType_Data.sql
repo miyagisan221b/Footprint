@@ -1,0 +1,18 @@
+SET IDENTITY_INSERT [dbo].[cmsContentType] ON
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (531, 1044, N'Member', N'icon-user', N'icon-user', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (532, 1031, N'Folder', N'icon-folder', N'icon-folder', NULL, 0, 1)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (533, 1032, N'Image', N'icon-picture', N'icon-picture', NULL, 0, 1)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (534, 1033, N'File', N'icon-document', N'icon-document', NULL, 0, 1)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (535, 1082, N'contentBase', N'icon-document-dashed-line', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (536, 1083, N'feature', N'icon-plugin', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (537, 1084, N'home', N'icon-home', N'folder.png', NULL, 0, 1)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (538, 1085, N'navigationBase', N'icon-nodes', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (539, 1086, N'blog', N'icon-calendar-alt', N'folder.png', NULL, 1, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (540, 1087, N'blogpost', N'icon-calendar', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (541, 1088, N'contact', N'icon-map-location', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (542, 1089, N'contentPage', N'icon-umb-content', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (543, 1090, N'people', N'icon-user-females-alt', N'folder.png', NULL, 1, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (544, 1091, N'person', N'icon-user-female', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (545, 1092, N'product', N'icon-sweatshirt', N'folder.png', NULL, 0, 0)
+INSERT INTO [dbo].[cmsContentType] ([pk], [nodeId], [alias], [icon], [thumbnail], [description], [isContainer], [allowAtRoot]) VALUES (546, 1093, N'products', N'icon-shopping-basket', N'folder.png', NULL, 1, 0)
+SET IDENTITY_INSERT [dbo].[cmsContentType] OFF
