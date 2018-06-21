@@ -69,6 +69,7 @@ namespace ncBehaviouralTargeting.Library.DataSources
             {
                 // Persistence: Permanent.
                 cookie.Expires = DateTime.UtcNow.AddYears(5);
+                responseCookies.Add(cookie);
             }
             else if (segment.Persistence > 0)
             {
@@ -80,9 +81,8 @@ namespace ncBehaviouralTargeting.Library.DataSources
                     // Don't update existing cookies that expire after X days.
                     return;
                 }
+                responseCookies.Add(cookie);
             }
-
-            responseCookies.Add(cookie);
         }
     }
 }
