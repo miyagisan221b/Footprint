@@ -80,6 +80,22 @@
             // -------------------------- Manipulation methods  --------------------------
             // Segment methods
             $scope.loadSegment = function (segment) {
+                //GET PAGE NAMES
+                if (segment.CriterionGroups != null && segment.CriterionGroups.length > 0) {
+                    angular.forEach(segment.CriterionGroups, function (v, i) {
+                        angular.forEach(v.Criterions, function (v2, i2) {
+                            if (v2.PropertyAlias == 'ncbt.pageId') {
+                                //Call Umbraco backend to get page name from NodeID
+                                ncbtSegmentUtilityResource.GetPageName(v2.PropertyValue).then(function (response) {
+                                    if (response != null && response.data != null && response.data.length > 0) {
+                                        v2.pageName = response.data[0];
+                                    }
+                                });
+                            }
+                        });
+                    });
+                }
+
                 $scope.data.node = segment;
 
                 // Push breadcrumb

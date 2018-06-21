@@ -9,6 +9,9 @@
             },
             GetProperties: function () {
                 return $http.get("backoffice/ncFootprintApi/SegmentUtility/GetProperties");
+            },
+            GetPageName: function (id) {
+                return $http.get("backoffice/ncFootprintApi/SegmentUtility/GetPageName?id=" + id);
             }
         };
     });

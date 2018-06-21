@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using ncBehaviouralTargeting.Library.Models;
@@ -31,6 +32,20 @@ namespace ncBehaviouralTargeting.Library.ApiControllers
         public dynamic GetProperties()
         {
             return Property.GetAllLight();
+        }
+
+        [HttpGet]
+        public List<string> GetPageName(int id)
+        {
+            var output = new List<string>();
+            var node = Umbraco.TypedContent(id);
+
+            if (node != null)
+            {
+                output.Add(node.Name);
+            }
+
+            return output;
         }
     }
 }

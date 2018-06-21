@@ -1,4 +1,4 @@
-﻿<form name="segmentForm" ng-submit="saveSegment()" ng-controller="ncFootprint.Backoffice.SegmentEdit.Controller">
+﻿<form name="segmentForm" ng-submit="saveSegment()" ng-controller="ncFootprint.Backoffice.SegmentEdit.Controller" val-form-manager>
     <umb-panel class="ncbt-section-panel">
         <umb-header tabs="tabs">
             <div class="span7">
@@ -154,7 +154,7 @@
                                                 <div ng-switch="criterion.PropertyAlias">
                                                     <div ng-switch-when="ncbt.pageId">
                                                         <div class="span12">
-                                                            <input type="text" class="span8" readonly="" value="{{criterion.pageName}}" />
+                                                            <input type="text" class="span8" readonly="" value="{{criterion.pageName}} ({{criterion.PropertyValue}})" />
                                                             <div class="btn span4" ng-click="btnSelectNode(criterion)">Select node</div>
                                                         </div>
                                                     </div>
