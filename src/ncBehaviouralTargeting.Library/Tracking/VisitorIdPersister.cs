@@ -21,7 +21,7 @@ namespace ncBehaviouralTargeting.Library.Tracking
 
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
-            if (ConfigurationHelper.Settings.IsDisabled || ConfigurationHelper.Settings.Sql.ElementInformation.IsPresent == false)
+            if (ConfigurationHelper.Settings == null || ConfigurationHelper.Settings.IsDisabled || ConfigurationHelper.Settings.Sql == null || ConfigurationHelper.Settings.Sql.ElementInformation == null || ConfigurationHelper.Settings.Sql.ElementInformation.IsPresent == false)
             {
                 return;
             }

@@ -352,6 +352,8 @@
     <Content Include="App_Plugins\ncFootprint\footprint.config" />
     <Content Include="App_Data\packages\installed\installedPackages.config" />
     <Content Include="App_Data\packages\created\createdPackages.config" />
+    <Content Include="App_Data\footprint.config" />
+    <Content Include="App_Data\test_footprint.config" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
