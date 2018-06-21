@@ -350,9 +350,8 @@
     <Content Include="App_Plugins\ncFootprint\package.manifest" />
     <Content Include="App_Plugins\ncFootprint\test_footprint.config" />
     <Content Include="App_Plugins\ncFootprint\footprint.config" />
-    <Content Include="..\ncBehaviouralTargeting.Website\App_Data\packages\created\createdPackages.config">
-      <Link>App_Data\packages\created\createdPackages.config</Link>
-    </Content>
+    <Content Include="App_Data\packages\installed\installedPackages.config" />
+    <Content Include="App_Data\packages\created\createdPackages.config" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -381,6 +380,7 @@
     <Content Include="Views\Person.cshtml" />
     <Content Include="Views\Product.cshtml" />
     <Content Include="Views\Products.cshtml" />
+    <Content Include="Umbraco\Plugins\ncFootprint\ScheduledTaskHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
