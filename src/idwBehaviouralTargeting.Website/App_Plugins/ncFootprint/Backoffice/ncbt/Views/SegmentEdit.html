@@ -184,38 +184,22 @@
 
                                             <div ng-switch-default>
                                                 <div ng-switch="criterion.PropertyAlias">
-                                                    <div ng-switch-when="idw.timeSpent">
+                                                    <div ng-switch-when="idw.timeSpent" ng-init="getNodesIDW(criterion)">
                                                         <div class="span12">
                                                             <div class="span6">
                                                                 <label>Time spent on page</label>
                                                             </div>
                                                             <div class="span6">
-                                                                <input />
+                                                                <input ng-model="idwTimeInSeconds" ng-change="updateTimeInSeconds(idwTimeInSeconds)" />
                                                             </div>
                                                         </div>
                                                         <div class="span12">
-                                                            <div class="span12">
+                                                            <div  class="span12">
                                                                 <label>Umbraco Nodes</label>
                                                             </div>
-                                                            <div class="span12">
-                                                                <input type="text" class="span8" readonly="" value="{{criterion.pageName}}" />
-                                                                <div class="btn span4" ng-click="btnSelectNodeIDW(criterion)">Select node</div>
-                                                            </div>
-                                                            <div class="span12">
-                                                                <input type="text" class="span8" readonly="" value="{{criterion.pageName}}" />
-                                                                <div class="btn span4" ng-click="btnSelectNodeIDW(criterion)">Select node</div>
-                                                            </div>
-                                                            <div class="span12">
-                                                                <input type="text" class="span8" readonly="" value="{{criterion.pageName}}" />
-                                                                <div class="btn span4" ng-click="btnSelectNodeIDW(criterion)">Select node</div>
-                                                            </div>
-                                                            <div class="span12">
-                                                                <input type="text" class="span8" readonly="" value="{{criterion.pageName}}" />
-                                                                <div class="btn span4" ng-click="btnSelectNodeIDW(criterion)">Select node</div>
-                                                                <div class="span12">
-                                                                    <input type="text" class="span8" readonly="" value="{{criterion.pageName}}" />
-                                                                    <div class="btn span4" ng-click="btnSelectNodeIDW(criterion)">Select node</div>
-                                                                </div>
+                                                            <div ng-repeat="n in idwNodes track by $index" class="span12">
+                                                                <input type="text" class="span8" readonly="" value="{{n.pageName}}" />
+                                                                <div class="btn span4" ng-click="btnSelectNodeIDW(criterion, n)">Select node</div>
                                                             </div>
                                                         </div>
                                                         <div class="span12">
