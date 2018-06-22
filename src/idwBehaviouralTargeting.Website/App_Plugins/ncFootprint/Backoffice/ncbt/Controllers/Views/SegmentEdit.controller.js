@@ -1,6 +1,9 @@
 ﻿angular.module('umbraco')
     .controller('ncFootprint.Backoffice.SegmentEdit.Controller',
-        function($scope, $routeParams, $controller, notificationsService, dialogService, ncbtSegmentResource, ncbtSegmentUtilityResource, ncbtSegmentOperatorResource) {
+        function ($scope, $routeParams, $controller, $http, notificationsService, dialogService, ncbtSegmentResource, ncbtSegmentUtilityResource, ncbtSegmentOperatorResource, contentResource) {
+
+            
+
             // Sync tree
             $scope.treeSyncPath = ['segmentoverview'];
 
@@ -80,6 +83,7 @@
             // -------------------------- Manipulation methods  --------------------------
             // Segment methods
             $scope.loadSegment = function (segment) {
+                
                 //GET PAGE NAMES
                 if (segment.CriterionGroups != null && segment.CriterionGroups.length > 0) {
                     angular.forEach(segment.CriterionGroups, function (v, i) {
@@ -97,7 +101,6 @@
                 }
 
                 $scope.data.node = segment;
-
                 // Push breadcrumb
                 $scope.$parent.pushBreadcrumb('Edit Segment - ' + segment.DisplayName);
             }
@@ -149,7 +152,7 @@
             };
 
             $scope.getProperty = function (propertyAlias) {
-                var result = $scope.data.properties.filter(function(obj) {
+                var result = $scope.data.properties.filter(function (obj) {
                     return obj.Alias === propertyAlias;
                 })[0];
                 if (result == null) {
@@ -160,6 +163,7 @@
                     result.Examples = result.Examples.replace('%ALIAS%', propertyAlias);
                 }
                 return result;
+                
             };
 
             // Pie chart methods
@@ -247,7 +251,89 @@
                     }
                 });
             };
+
+            $scope.btnSelectNodeIDW = function (criterion, n) {
+                // Open dialog to let the user select a property
+                var oldValue = n.PropertyValue;
+                var index = -1;
+                if (oldValue != "") {
+                    var currentValue = criterion.PropertyValue.split('|');
+                    index = currentValue.indexOf(oldValue);
+                }
+                dialogService.contentPicker({
+                    multipicker: false,
+                    callback: function (data) {
+                        if (data != undefined) {
+                            
+                            if (index == -1) {
+                                criterion.pageName = data.name;
+                                criterion.PropertyValue += "|" + data.id.toString();
+                            }
+                            else {
+                                console.log(currentValue[index]);
+                                currentValue[index] = data.id.toString();
+                                console.log(currentValue.toString().replace(/,/g, "|"));
+                                criterion.PropertyValue = currentValue.toString().replace(/,/g, "|");
+                            }
+                            n.pageName = data.name;
+                            n.PropertyValue = data.id.toString();
+                        }
+                    }
+                });
+            };
             
+            $scope.addNewNodeIDW = function () {
+                var newItem = {
+                    "pageName": "",
+                    "PropertyValue": ""
+                }
+                $scope.idwNodes.push(newItem);
+            };
+
+            $scope.removeNodeIDW = function (criterionGroup, criterion, n, index) {
+                $scope.idwNodes.splice(index, 1);
+                $scope.updateCriterionvalue(criterion, n);
+            };
+
+            $scope.updateCriterionvalue = function (criterion, n) {
+                var currentValue = criterion.PropertyValue.split('|');
+                var index = currentValue.indexOf(n.PropertyValue);
+                currentValue.splice(index, 1);
+                criterion.PropertyValue = currentValue.toString().replace(/,/g, "|");
+            };
+
+            $scope.idwNodes = [];
+            $scope.idwTimeInSeconds = "";
+
+            $scope.updateTimeInSeconds = function (value, criterion) {
+                $scope.idwTimeInSeconds = value;
+                var data = criterion.PropertyValue.split('|');
+                data[0] = value;
+                criterion.PropertyValue = data.toString().replace(/,/g, "|");
+            }
+
+            $scope.getNodesIDW = function (criterion) {
+                var data = criterion.PropertyValue.split('|');
+                $scope.idwTimeInSeconds = data[0];
+                var cnt = 0;
+                angular.forEach(data, function (value, key) {
+                    if (cnt > 0) {
+                        $scope.getNodeName(value).then(function (data) {
+                            var newItem = {
+                                "pageName": data.name,
+                                "PropertyValue": value
+                            };
+                            $scope.idwNodes.push(newItem);
+                        });;
+                    }
+                    cnt++;
+                })
+                return $scope.idwNodes;
+            }
+
+            $scope.getNodeName = function (value) {
+                return contentResource.getById(value);
+            }
 
             // -------------------------- Initial data fetching --------------------------
             // Fetch current segment
@@ -266,6 +352,7 @@
             ncbtSegmentUtilityResource.GetProperties().then(function (response) {
                 // Save properties
                 $scope.loadProperties(response.data);
+                
             });
 
             // Fetch all data types

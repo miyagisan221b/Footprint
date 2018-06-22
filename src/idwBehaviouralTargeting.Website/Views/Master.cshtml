@@ -1,4 +1,5 @@
 ﻿@inherits UmbracoTemplatePage
+@using ncBehaviouralTargeting.Library.Umbraco;
 @{
     Layout = null;
 
@@ -6,6 +7,7 @@
     var home = (Home)Model.Content.Site();
     var colorTheme = Umbraco.GetPreValueAsString(home.ColorTheme);
     var font = Umbraco.GetPreValueAsString(home.Font);
+    var node = CurrentPage;
 }
 
 <!doctype html>
@@ -21,6 +23,7 @@
 
     <link rel="stylesheet" href="@Url.Content("~/css/umbraco-starterkit-style.css")" />
     @RenderSection("Header", required: false)
+    
 </head>
 
 <body class="frontpage theme-font-@font theme-color-@colorTheme">
@@ -70,10 +73,69 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/app_plugins/ncFootprint/api/footprint.js"></script>
+    <script>
+        var currentNodeId = @CurrentPage.Id;
+        function httpGetAsync(theUrl, callback)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    callback(xmlHttp.responseText);
+            }
+            xmlHttp.open("GET", theUrl, true); // true for asynchronous
+            xmlHttp.send(null);
+        }
+        addToSegment = function(alias, delay){
+            delay = delay * 1000;
+            console.log(delay);
+            var exists = httpGetAsync("/umbraco/ncFootprintApi/CurrentVisitor/IsInSegment?segmentAlias=" + alias, function(callback){
+                if (callback === "false"){
+                    console.log("hit");
+                    setTimeout(function()
+                    { 
+                        footprint.currentVisitor.addToSegment(alias);
+                        console.log("added");
+                    }, delay);
+                }
+            })
+        };
+        httpGetAsync("/umbraco/backoffice/ncFootprintApi/Segment/GetAllLight", function(callback){
+            var data = JSON.parse(callback);
+            data.forEach(function(item){
+                var id = item.Id;
+                httpGetAsync("/umbraco/backoffice/ncFootprintApi/Segment/GetById?id=" + id, function(cb2){
+                    var cGroup = JSON.parse(cb2).CriterionGroups;
+                    if (cGroup != undefined){
+                        cGroup.forEach(function(c){
+                            var criteria = c.Criterions;
+                            criteria.forEach(function(cItem){
+                                if (cItem.PropertyAlias == "idw.timeSpent"){
+                                    var validNodes = "";
+                                    var data = cItem.PropertyValue.split('|');
+                                    var cnt = 0;
+                                    var time = data[0];
+                                    data.forEach(function(node){
+                                        if (cnt > 0){
+                                            if (currentNodeId == node){
+                                                addToSegment(JSON.parse(cb2).Alias, time);
+                                            }
+                                        }
+                                        cnt++;
+                                    })
+                                }
+                            })
+                        })
+                    }
+                })
+            })
+        });
+    </script>
+    <script src="/scripts/site.js"></script>
     <script src="@Url.Content("~/scripts/umbraco-starterkit-app.js")"></script>
 
 </body>
