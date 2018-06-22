@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Umbraco.Web.Mvc;
 using Umbraco.Web.WebApi;
+using NcbtSegment = ncBehaviouralTargeting.Library.Models.Segment;
 
 namespace ncBehaviouralTargeting.Library.ApiControllers
 {
@@ -66,5 +67,48 @@ namespace ncBehaviouralTargeting.Library.ApiControllers
         {
             CurrentVisitor.VisitorId = visitorId;
         }
+
+        [HttpGet]
+        public ResponseObject IsTimeSpentCurrentNode(string nodeId)
+        {
+            var response = new ResponseObject();
+            response.Success = false;
+            var segments = NcbtSegment.GetAllLight();
+            foreach (var s in segments)
+            {
+                var id = s.Id;
+                var segment = NcbtSegment.GetById(id);
+                var alias = s.Alias;
+                if (segment.CriterionGroups.Count() > 0)
+                {
+                    foreach (var cGroup in segment.CriterionGroups)
+                    {
+                        foreach (var c in cGroup.Criterions)
+                        {
+                            if (c.PropertyAlias == "idw.timeSpent")
+                            {
+                                var validNodes = c.PropertyValue;
+                                if (validNodes.Contains(nodeId))
+                                {
+                                    response.Success = true;
+                                    response.Alias = alias;
+                                    response.Delay = int.Parse(validNodes.Split('|')[0].ToString());
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return response;
+        }
+
+        public class ResponseObject
+        {
+            public bool Success {get;set;}
+            public string Alias {get;set;}
+            public int Delay {get;set;}
+        }
+
     }
 }

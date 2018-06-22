@@ -1,5 +1,4 @@
 "use strict";
-
 var footprint = function () {
     var prepareXhr = function (xhr, onSuccess, onError) {
         xhr.onload = function () {
@@ -67,3 +66,34 @@ var footprint = function () {
         }
     };
 }();
+
+function httpGetAsync(theUrl, callback) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.send(null);
+}
+
+var addToSegmentWithDelay = function (alias, delay) {
+    delay = delay * 1000;
+    console.log(delay);
+    var exists = httpGetAsync("/umbraco/ncFootprintApi/CurrentVisitor/IsInSegment?segmentAlias=" + alias, function (callback) {
+        if (callback === "false") {
+            console.log("hit");
+            setTimeout(function () {
+                footprint.currentVisitor.addToSegment(alias);
+                console.log("added");
+            }, delay);
+        }
+    })
+};
+httpGetAsync("/umbraco/ncFootprintApi/CurrentVisitor/IsTimeSpentCurrentNode?nodeId=" + currentNodeId, function (callback) {
+    var response = JSON.parse(callback);
+    console.log(response);
+    if (response.Success === true) {
+        addToSegmentWithDelay(response.Alias, response.Delay);
+    }
+});
