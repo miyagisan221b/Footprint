@@ -9,9 +9,11 @@
 
             $scope.content = "";
 
-            ncbtDashboardResource.Get()
-                .then(function (result) {
-                    $scope.content = result.data.content;
-                });
+            //Use this to return your own custom dashboard content
+            //ncbtDashboardResource.Get()
+            //    .then(function (result) {
+            //        console.log(result);
+            //        $scope.content = result.data.content;
+            //    });
         }
     );
