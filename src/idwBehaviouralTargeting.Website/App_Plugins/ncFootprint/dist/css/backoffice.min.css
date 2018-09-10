@@ -105,6 +105,7 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
   margin: 0;
   position: absolute;
   font-size: 13px;
+  z-index: 999;
 }
 .ncbt-editor .ncbt-control-tabs li > a {
   color: #000;
