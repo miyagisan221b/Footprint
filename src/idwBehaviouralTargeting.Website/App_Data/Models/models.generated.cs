@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "58b2cafcd5683e21")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "cd2998d74f96841b")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -269,6 +269,42 @@ namespace Umbraco.Web.PublishedContentModels
 		public string HeroHeader
 		{
 			get { return this.GetPropertyValue<string>("heroHeader"); }
+		}
+
+		///<summary>
+		/// People
+		///</summary>
+		[ImplementPropertyType("people")]
+		public ncBehaviouralTargeting.Library.Models.NcbtValue People
+		{
+			get { return this.GetPropertyValue<ncBehaviouralTargeting.Library.Models.NcbtValue>("people"); }
+		}
+
+		///<summary>
+		/// Prevalue 1
+		///</summary>
+		[ImplementPropertyType("prevalue1")]
+		public ncBehaviouralTargeting.Library.Models.NcbtValue Prevalue1
+		{
+			get { return this.GetPropertyValue<ncBehaviouralTargeting.Library.Models.NcbtValue>("prevalue1"); }
+		}
+
+		///<summary>
+		/// Prevalue 2
+		///</summary>
+		[ImplementPropertyType("prevalue2")]
+		public ncBehaviouralTargeting.Library.Models.NcbtValue Prevalue2
+		{
+			get { return this.GetPropertyValue<ncBehaviouralTargeting.Library.Models.NcbtValue>("prevalue2"); }
+		}
+
+		///<summary>
+		/// Prevalue 3
+		///</summary>
+		[ImplementPropertyType("prevalue3")]
+		public ncBehaviouralTargeting.Library.Models.NcbtValue Prevalue3
+		{
+			get { return this.GetPropertyValue<ncBehaviouralTargeting.Library.Models.NcbtValue>("prevalue3"); }
 		}
 
 		///<summary>
@@ -843,15 +879,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Person, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Department
-		///</summary>
-		[ImplementPropertyType("department")]
-		public IEnumerable<string> Department
-		{
-			get { return this.GetPropertyValue<IEnumerable<string>>("department"); }
 		}
 
 		///<summary>

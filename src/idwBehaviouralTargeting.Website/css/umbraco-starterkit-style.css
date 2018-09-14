@@ -1306,7 +1306,8 @@ body.theme-font-mono {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    position: absolute;
+    position: relative;
+    background-color:black;
     width: 100%;
     z-index: 4
 }

@@ -112,32 +112,38 @@ namespace ncBehaviouralTargeting.Library.Umbraco
                         // We have a possible multivalue, get the prevalues
                         var preValueIter = umbraco.library.GetPreValues(ncbtModel.DataTypeId);
                         // Get value ids from segment model
-                        var modelIds = ((JArray) segmentModel.Value).Values<int>().ToList();
-                        var modelValues = new List<object>();
 
-                        // Go through prevalues
-                        while (preValueIter.MoveNext())
+                        //What is this an array of exactly?  We skip this part if it is more complex than an "int" data type
+                        var jarr = (JArray)segmentModel.Value;
+                        if (jarr.Count > 0 && !(jarr.First is object))
                         {
-                            // TODO: Check if multivalue view present in selected editor prevalue
+                            var modelIds = jarr.Values<int>().ToList();
+                            var modelValues = new List<object>();
 
-                            // Get prevalues from xpath nav
-                            var preValuesXpathNav = preValueIter.Current;
-                            // Check for each prevalue id in the model
-                            modelIds.ForEach(preValueId =>
+                            // Go through prevalues
+                            while (preValueIter.MoveNext())
                             {
+                                // TODO: Check if multivalue view present in selected editor prevalue
+
+                                // Get prevalues from xpath nav
+                                var preValuesXpathNav = preValueIter.Current;
+                                // Check for each prevalue id in the model
+                                modelIds.ForEach(preValueId =>
+                                {
                                 // Try using xpath
                                 var preValueValueXpathNav = preValuesXpathNav.Select("//preValue[@id='" + preValueId + "']");
-                                if (preValueValueXpathNav.Count != 0)
-                                {
+                                    if (preValueValueXpathNav.Count != 0)
+                                    {
                                     // We found our prevalue!
                                     preValueValueXpathNav.MoveNext();
-                                    modelValues.Add(preValueValueXpathNav.Current.Value);
-                                }
-                            });
-                        }
+                                        modelValues.Add(preValueValueXpathNav.Current.Value);
+                                    }
+                                });
+                            }
 
-                        // Assign values back to model in CSV format, as Umbraco does
-                        segmentModel.Value = string.Join(",", modelValues);
+                            // Assign values back to model in CSV format, as Umbraco does
+                            segmentModel.Value = string.Join(",", modelValues);
+                        }
                     }
 
                     // Return value

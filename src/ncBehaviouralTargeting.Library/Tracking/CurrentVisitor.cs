@@ -224,7 +224,7 @@ namespace ncBehaviouralTargeting.Library.Tracking
         /// <param name="httpContext">The HTTP context for getting footprints and setting the cookie. If null, HttpContext.Current will be used</param>
         internal static void SetFootprints(HttpContextBase httpContext)
         {
-            if (Request.Url.PathAndQuery.StartsWith("/umbraco/"))
+            if (Request.Url.PathAndQuery.StartsWith("/umbraco/") || Request.Url.PathAndQuery.StartsWith("/App_Plugins/"))
             {
                 return;
             }

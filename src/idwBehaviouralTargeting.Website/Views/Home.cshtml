@@ -6,9 +6,14 @@
     var backgroundImage = Model.Content.HeroBackgroundImage != null ? Model.Content.HeroBackgroundImage.Url : String.Empty;
 }
 
-    <section>
-        @Html.Raw(Model.Content.GetSegmentedValue("text"))
-    </section>
+<section>
+    <p>Text: @Html.Raw(Model.Content.GetSegmentedValue("text"))</p>
+    <p>People: @Html.Raw(Model.Content.GetSegmentedValue("people").ToString())</p>
+    <p>Prevalue 1: @Html.Raw(Model.Content.GetSegmentedValue("prevalue1").ToString())</p>
+    <p>Prevalue 2: @Html.Raw(Model.Content.GetSegmentedValue("prevalue2").ToString())</p>
+    <p>Prevalue 3: @Html.Raw(Model.Content.GetSegmentedValue("prevalue3").ToString())</p>
+
+</section>
     <section class="section section--full-height background-image-full overlay overlay--dark section--content-center section--thick-border"
              style="background-image: url('@backgroundImage')">
         <div class="section__hero-content">
