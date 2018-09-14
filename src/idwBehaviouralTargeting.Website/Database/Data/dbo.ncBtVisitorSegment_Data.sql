@@ -1,3 +1,4 @@
+INSERT INTO [dbo].[ncBtVisitorSegment] ([VisitorId], [SegmentAlias], [CreatedUtc]) VALUES (N'b9bfb57b62b644a894a2c8b87ef8a6ab', N'Test', '2018-06-21 00:32:27.993')
 INSERT INTO [dbo].[ncBtVisitorSegment] ([VisitorId], [SegmentAlias], [CreatedUtc]) VALUES (N'15ef4890a049492ca33a3f85b5643612', N'Test', '2018-06-20 05:29:11.213')
 INSERT INTO [dbo].[ncBtVisitorSegment] ([VisitorId], [SegmentAlias], [CreatedUtc]) VALUES (N'238ffdf752a5427eb69d7479bbc3d5ea', N'Test', '2018-06-20 05:28:30.403')
 INSERT INTO [dbo].[ncBtVisitorSegment] ([VisitorId], [SegmentAlias], [CreatedUtc]) VALUES (N'2459d221c04c422c892bd57de51cee2d', N'Test', '2018-06-20 05:29:32.497')

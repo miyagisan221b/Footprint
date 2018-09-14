@@ -1,61 +1,317 @@
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] ON
-INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (87, 1135, N'{
-  "selectedEditor": "Umbraco.TinyMCEv3",
+EXEC(N'INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (95, 1137, N''{
+  "selectedEditor": "Umbraco.NestedContent",
   "preValues": [
     {
-      "hideLabel": true,
-      "alias": "editor",
-      "description": null,
-      "label": null,
-      "view": "views/propertyeditors/rte/rte.prevalues.html",
-      "value": {
-        "toolbar": [
-          "code",
-          "styleselect",
-          "bold",
-          "italic",
-          "alignleft",
-          "aligncenter",
-          "alignright",
-          "bullist",
-          "numlist",
-          "outdent",
-          "indent",
-          "link",
-          "umbmediapicker",
-          "umbmacro",
-          "umbembeddialog"
-        ],
-        "stylesheets": [],
-        "dimensions": {
-          "height": 500
+      "hideLabel": false,
+      "alias": "contentTypes",
+      "description": "Select the doc types to use as the data blueprint.",
+      "label": "Doc Types",
+      "view": "views/propertyeditors/nestedcontent/nestedcontent.doctypepicker.html",
+      "value": [
+        {
+          "ncAlias": "person",
+          "ncTabAlias": "Details",
+          "nameTemplate": ""
+        }
+      ],
+      "docTypes": [
+        {
+          "id": 1082,
+          "guid": "b5256719-6b8d-44c5-9dac-68d955f767bb",
+          "name": "Content Base",
+          "alias": "contentBase",
+          "icon": "icon-document-dashed-line",
+          "tabs": [
+            "Content"
+          ]
         },
-        "maxImageSize": 500
-      }
+        {
+          "id": 1083,
+          "guid": "3281649a-2f18-42bc-8717-a8d5183a02a4",
+          "name": "Feature",
+          "alias": "feature",
+          "icon": "icon-plugin",
+          "tabs": [
+            "Feature"
+          ]
+        },
+        {
+          "id": 1086,
+          "guid": "308b1af5-852f-458a-9952-a843bef6f888",
+          "name": "Blog",
+          "alias": "blog",
+          "icon": "icon-calendar-alt",
+          "tabs": [
+            "Content",
+            "Navigation & SEO",
+            "Settings"
+          ]
+        },
+        {
+          "id": 1085,
+          "guid": "69a9b10f-2751-4258-890c-3d12f99c8be5",
+          "name": "Navigation Base",
+          "alias": "navigationBase",
+          "icon": "icon-nodes",
+          "tabs": [
+            "Navigation & SEO"
+          ]
+        },
+        {
+          "id": 1087,
+          "guid": "c59c84bf-33df-4179-9d36-bb04fb417ac5",
+          "name": "Blogpost",
+          "alias": "blogpost",
+          "icon": "icon-calendar",
+          "tabs": [
+            "Navigation & SEO",
+            "Content"
+          ]
+        },
+        {
+          "id": 1088,
+          "guid": "94f84f83-760b-416b-bd1e-f764fdeb6a81",
+          "name": "Contact",
+          "alias": "contact",
+          "icon": "icon-map-location",
+          "tabs": [
+            "Navigation & SEO",
+            "Form",
+            "Map"
+          ]
+        },
+        {
+          "id": 1089,
+          "guid": "88992c55-6502-40a2-a3ec-e42255269b74",
+          "name": "Content Page",
+          "alias": "contentPage",
+          "icon": "icon-umb-content",
+          "tabs": [
+            "Content",
+            "Navigation & SEO"
+          ]
+        },
+        {
+          "id": 1090,
+          "guid": "b2dd6d1e-45bd-4728-9324-258d21ea904e",
+          "name": "People",
+          "alias": "people",
+          "icon": "icon-user-females-alt",
+          "tabs": [
+            "Content",
+            "Navigation & SEO"
+          ]
+        },
+        {
+          "id": 1091,
+          "guid": "e9a4d2fc-9870-4f88-b2fc-65897dc8648d",
+          "name": "Person",
+          "alias": "person",
+          "icon": "icon-user-female",
+          "tabs": [
+            "Navigation & SEO",
+            "Details",
+            "Social"
+          ]
+        },
+        {
+          "id": 1092,
+          "guid": "ea1fc381-7089-4895-be12-9d740ca6c5b4",
+          "name": "Product",
+          "alias": "product",
+          "icon": "icon-sweatshirt",
+          "tabs": [
+            "Detailed Description",
+            "Features",
+            "Product Details"
+          ]
+        },
+        {
+          "id": 1093,
+          "guid": "64dccad5-4239-4606-91a7-27ce34743c0e",
+          "name": "Products",
+          "alias": "products",
+          "icon": "icon-shopping-basket",
+          "tabs": [
+            "Content",
+            "Navigation & SEO",
+            "Shop"
+          ]
+        },
+        {
+          "id": 1084,
+          "guid": "d40f5594-1b41-49e3-a2c6-a19884c264cf",
+          "name": "Home",
+          "alias": "home",
+          "icon": "icon-home",
+          "tabs"'', 1, N''contentType'')')
+SELECT @pv=TEXTPTR([value]) FROM [dbo].[cmsDataTypePreValues] WHERE [id]=95
+UPDATETEXT [dbo].[cmsDataTypePreValues].[value] @pv NULL NULL N': [
+            "Content",
+            "Design",
+            "Footer",
+            "Hero"
+          ]
+        }
+      ]
+    },
+    {
+      "hideLabel": false,
+      "alias": "minItems",
+      "description": "Set the minimum number of items allowed.",
+      "label": "Min Items",
+      "view": "number",
+      "value": 0
+    },
+    {
+      "hideLabel": false,
+      "alias": "maxItems",
+      "description": "Set the maximum number of items allowed.",
+      "label": "Max Items",
+      "view": "number",
+      "value": 0
+    },
+    {
+      "hideLabel": false,
+      "alias": "confirmDeletes",
+      "description": "Set whether item deletions should require confirming.",
+      "label": "Confirm Deletes",
+      "view": "boolean",
+      "value": "1"
+    },
+    {
+      "hideLabel": false,
+      "alias": "showIcons",
+      "description": "Set whether to show the items doc type icon in the list.",
+      "label": "Show Icons",
+      "view": "boolean",
+      "value": "1"
     },
     {
       "hideLabel": false,
       "alias": "hideLabel",
-      "description": null,
+      "description": "Set whether to hide the editor label and have the list take up the full width of the editor window.",
       "label": "Hide Label",
       "view": "boolean",
       "value": null
     }
   ]
-}', 1, N'contentType')
-INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (88, 1136, N'{
-  "selectedEditor": "Umbraco.Textbox",
+}'
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (96, 1138, N'{
+  "selectedEditor": "Umbraco.CheckBoxList",
   "preValues": [
     {
       "hideLabel": false,
-      "alias": "maxChars",
-      "description": "If empty - 500 character limit",
-      "label": "Maximum allowed characters",
-      "view": "textstringlimited",
+      "alias": "items",
+      "description": "Add and remove values for the list",
+      "label": "Add prevalue",
+      "view": "multivalues",
+      "value": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "2"
+        },
+        {
+          "value": "3"
+        },
+        {
+          "value": "4"
+        },
+        {
+          "value": "5"
+        }
+      ]
+    }
+  ]
+}', 1, N'contentType')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (97, 1138, N'1', 2, N'items-0-0')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (98, 1138, N'2', 3, N'items-0-1')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (99, 1138, N'3', 4, N'items-0-2')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (100, 1138, N'4', 5, N'items-0-3')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (101, 1138, N'5', 6, N'items-0-4')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (103, 1139, N'{
+  "selectedEditor": "Umbraco.MediaPicker2",
+  "preValues": [
+    {
+      "hideLabel": false,
+      "alias": "multiPicker",
+      "description": null,
+      "label": "Pick multiple items",
+      "view": "boolean",
+      "value": "1"
+    },
+    {
+      "hideLabel": false,
+      "alias": "onlyImages",
+      "description": "Only let the editor choose images from media.",
+      "label": "Pick only images",
+      "view": "boolean",
+      "value": "1"
+    },
+    {
+      "hideLabel": false,
+      "alias": "disableFolderSelect",
+      "description": "Do not allow folders to be picked.",
+      "label": "Disable folder select",
+      "view": "boolean",
+      "value": null
+    },
+    {
+      "hideLabel": false,
+      "alias": "startNodeId",
+      "description": null,
+      "label": "Start node",
+      "view": "mediapicker",
+      "value": ""
+    }
+  ]
+}', 1, N'contentType')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (104, 1140, N'{
+  "selectedEditor": "Umbraco.DropDownMultiple",
+  "preValues": [
+    {
+      "hideLabel": false,
+      "alias": "items",
+      "description": "Add and remove values for the list",
+      "label": "Add prevalue",
+      "view": "multivalues",
+      "value": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "2"
+        },
+        {
+          "value": "3"
+        },
+        {
+          "value": "4"
+        },
+        {
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "hideLabel": true,
+      "alias": "multiple",
+      "description": null,
+      "label": "multiple",
+      "view": "hidden",
       "value": null
     }
   ]
 }', 1, N'contentType')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (105, 1140, N'1', 2, N'items-0-0')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (106, 1140, N'2', 3, N'items-0-1')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (107, 1140, N'3', 4, N'items-0-2')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (108, 1140, N'4', 5, N'items-0-3')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (109, 1140, N'5', 6, N'items-0-4')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (110, 1041, N'Csv', 2, N'storageType')
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] OFF
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] ON
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (-9, -96, N'[{"alias":"updateDate","header":"Last edited","isSystem":1},{"alias":"owner","header":"Updated by","isSystem":1}]', 5, N'includeProperties')
@@ -658,4 +914,61 @@ INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sort
   "allowBulkDelete": true
 }', 7, N'bulkActionPermissions')
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (86, 1080, N'[]', 1, N'allowedForms')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (87, 1135, N'{
+  "selectedEditor": "Umbraco.TinyMCEv3",
+  "preValues": [
+    {
+      "hideLabel": true,
+      "alias": "editor",
+      "description": null,
+      "label": null,
+      "view": "views/propertyeditors/rte/rte.prevalues.html",
+      "value": {
+        "toolbar": [
+          "code",
+          "styleselect",
+          "bold",
+          "italic",
+          "alignleft",
+          "aligncenter",
+          "alignright",
+          "bullist",
+          "numlist",
+          "outdent",
+          "indent",
+          "link",
+          "umbmediapicker",
+          "umbmacro",
+          "umbembeddialog"
+        ],
+        "stylesheets": [],
+        "dimensions": {
+          "height": 500
+        },
+        "maxImageSize": 500
+      }
+    },
+    {
+      "hideLabel": false,
+      "alias": "hideLabel",
+      "description": null,
+      "label": "Hide Label",
+      "view": "boolean",
+      "value": null
+    }
+  ]
+}', 1, N'contentType')
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id], [datatypeNodeId], [value], [sortorder], [alias]) VALUES (88, 1136, N'{
+  "selectedEditor": "Umbraco.Textbox",
+  "preValues": [
+    {
+      "hideLabel": false,
+      "alias": "maxChars",
+      "description": "If empty - 500 character limit",
+      "label": "Maximum allowed characters",
+      "view": "textstringlimited",
+      "value": null
+    }
+  ]
+}', 1, N'contentType')
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] OFF

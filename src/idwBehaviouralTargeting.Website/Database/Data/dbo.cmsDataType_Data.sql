@@ -1,6 +1,8 @@
 SET IDENTITY_INSERT [dbo].[cmsDataType] ON
-INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (51, 1135, N'Novicell.Footprint.FootprintContent', N'Ntext')
-INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (52, 1136, N'Novicell.Footprint.FootprintContent', N'Ntext')
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (53, 1137, N'Novicell.Footprint.FootprintContent', N'Ntext')
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (54, 1138, N'Novicell.Footprint.FootprintContent', N'Ntext')
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (55, 1139, N'Novicell.Footprint.FootprintContent', N'Ntext')
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (56, 1140, N'Novicell.Footprint.FootprintContent', N'Ntext')
 SET IDENTITY_INSERT [dbo].[cmsDataType] OFF
 SET IDENTITY_INSERT [dbo].[cmsDataType] ON
 INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (-28, -97, N'Umbraco.ListView', N'Nvarchar')
@@ -47,4 +49,6 @@ INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]
 INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (48, 1078, N'Umbraco.MediaPicker2', N'Ntext')
 INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (49, 1079, N'Umbraco.ListView', N'Nvarchar')
 INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (50, 1080, N'UmbracoForms.FormPicker', N'Nvarchar')
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (51, 1135, N'Novicell.Footprint.FootprintContent', N'Ntext')
+INSERT INTO [dbo].[cmsDataType] ([pk], [nodeId], [propertyEditorAlias], [dbType]) VALUES (52, 1136, N'Novicell.Footprint.FootprintContent', N'Ntext')
 SET IDENTITY_INSERT [dbo].[cmsDataType] OFF

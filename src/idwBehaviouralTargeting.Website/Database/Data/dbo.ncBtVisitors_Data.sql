@@ -1,3 +1,5 @@
+INSERT INTO [dbo].[ncBtVisitors] ([Id]) VALUES (N'14497f52fe3a451eaaafeecb0cdcd5a7')
+INSERT INTO [dbo].[ncBtVisitors] ([Id]) VALUES (N'602c578fdf7e4cbe8f2ff8d083fad2a1')
 INSERT INTO [dbo].[ncBtVisitors] ([Id]) VALUES (N'2459d221c04c422c892bd57de51cee2d')
 INSERT INTO [dbo].[ncBtVisitors] ([Id]) VALUES (N'81a8b4ab648644e5a15b474a5ab8fb86')
 INSERT INTO [dbo].[ncBtVisitors] ([Id]) VALUES (N'a4920235b49d426c8d8cb28098ace401')
