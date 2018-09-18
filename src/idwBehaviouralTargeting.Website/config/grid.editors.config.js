@@ -42,5 +42,25 @@
             "style": "border-left: 3px solid #ccc; padding: 10px; color: #ccc; font-family: serif; font-style: italic; font-size: 18px",
             "markup": "<blockquote>#value#</blockquote>"
         }
+    },
+    {
+        "name": "Slider",
+        "alias": "slider",
+        "view": "/App_Plugins/LeBlender/editors/leblendereditor/LeBlendereditor.html",
+        "icon": "icon-settings-alt",
+        "render": "/App_Plugins/LeBlender/editors/leblendereditor/views/Base.cshtml",
+        "config": {
+            "editors": [
+                {
+                    "name": "Slide",
+                    "alias": "slide",
+                    "propretyType": {},
+                    "dataType": "050f2d4f-81fd-4657-b628-9e216d321b3a"
+                }
+            ],
+            "frontView": "",
+            "min": 1,
+            "max": 1
+        }
     }
 ]
