@@ -1,6 +1,6 @@
 ﻿angular.module('umbraco')
     .controller('Novicell.Footprint.Editors.FootprintContent.Controller',
-    function ($scope, dialogService, ncbtPropertyEditorResource, ncbtSegmentResource) {
+    function ($scope,$rootScope, dialogService, ncbtPropertyEditorResource, ncbtSegmentResource,$route) {
 
         // Check for editor conversions
         if ($scope.model.value != undefined && $scope.model.value.isNcbt == undefined) {
@@ -59,6 +59,15 @@
                 return obj.Alias === segmentAlias;
             })[0];
         };
+
+        // Add Event Handler to refresh the page on Publish.  This gets around the issue of the Grid Editor items becoming unbound from the model (meaning editor Headings disappear, and they can't be edited without a refresh)
+        $rootScope.$on('content.saved', function (scope, args) {
+            angular.forEach(args.content.properties, function (v, i) {
+                if (v.editor == 'Novicell.Footprint.FootprintContent' && v.config.contentType.selectedEditor == 'Umbraco.Grid') {
+                    $route.reload();
+                }
+            });
+        });
 
         // Set segment by alias
         $scope.setSelectedSegment = function (segmentAlias) {

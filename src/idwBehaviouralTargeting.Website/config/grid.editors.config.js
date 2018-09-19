@@ -60,7 +60,8 @@
             ],
             "frontView": "",
             "min": 1,
-            "max": 1
+            "max": 1,
+            "renderInGrid": "1"
         }
     }
 ]

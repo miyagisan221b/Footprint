@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c0c86400077fdcaf")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.7")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f83a89760d9be99c")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
 // FILE: models.generated.cs
@@ -294,6 +294,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string HeroHeader
 		{
 			get { return this.GetPropertyValue<string>("heroHeader"); }
+		}
+
+		///<summary>
+		/// Home Grid Test
+		///</summary>
+		[ImplementPropertyType("homeGridTest")]
+		public Newtonsoft.Json.Linq.JToken HomeGridTest
+		{
+			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("homeGridTest"); }
 		}
 
 		///<summary>
